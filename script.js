@@ -15,7 +15,7 @@
                 btn2.style.display = "block";
             }
 			else {
-                existingBtn.style.display = "none";
+                btn2.style.display = "none";
             }
         })
 
