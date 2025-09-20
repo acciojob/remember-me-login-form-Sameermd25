@@ -1,5 +1,5 @@
 //your JS code here. If required.
-const username = document.getElementById("username");
+		const username = document.getElementById("username");
         const password = document.getElementById("password");
         const checkbox = document.getElementById("checkbox");
         const btn1 = document.getElementById("submit");
@@ -13,6 +13,9 @@ const username = document.getElementById("username");
 
             if (savedUsername && savedPassword) {
                 btn2.style.display = "block";
+            }
+			else {
+                existingBtn.style.display = "none";
             }
         })
 
