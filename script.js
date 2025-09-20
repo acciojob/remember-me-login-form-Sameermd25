@@ -1,5 +1,4 @@
-//your JS code here. If required.
-		const username = document.getElementById("username");
+const username = document.getElementById("username");
         const password = document.getElementById("password");
         const checkbox = document.getElementById("checkbox");
         const btn1 = document.getElementById("submit");
@@ -8,13 +7,17 @@
         //alert(`Logged in as ${username.value}`);
 
         window.addEventListener("DOMContentLoaded", () => {
+            username.value = "";
+            password.value = "";
+            checkbox.checked = false;
+
             const savedUsername = localStorage.getItem("username");
             const savedPassword = localStorage.getItem("password");
 
             if (savedUsername && savedPassword) {
                 btn2.style.display = "block";
             }
-			else {
+            else {
                 btn2.style.display = "none";
             }
         })
@@ -29,13 +32,14 @@
                 localStorage.setItem("username", username.value);
                 localStorage.setItem("password", password.value);
                 btn2.style.display = "block";
-				alert(`Logged in as ${username.value}`);
+                
             }
             else {
                 localStorage.removeItem("username");
                 localStorage.removeItem("password");
                 btn2.style.display = "none";
             }
+            alert(`Logged in as ${username.value}`);
         }
 
         function retrievingFromLocalStorage(e) {
@@ -47,4 +51,4 @@
             } else {
                 alert("No saved credentials found.");
             }
-        }
+		}
