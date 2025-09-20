@@ -26,6 +26,7 @@ const username = document.getElementById("username");
                 localStorage.setItem("username", username.value);
                 localStorage.setItem("password", password.value);
                 btn2.style.display = "block";
+				alert(`Logged in as ${username.value}`);
             }
             else {
                 localStorage.removeItem("username");
